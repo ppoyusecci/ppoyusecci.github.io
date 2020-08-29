@@ -7,14 +7,17 @@ function App() {
     <div className="background">
 
 
-      <header className="App=header">
-        <Loading color="white"/>
-      </header>
+      <div className="App-header">
+        <div className="App-header-logo">
+          <Loading color="red"/>
+        </div>
+        
+        <div className="App-header-text">
+          This is a personal website about Tom
+        </div>
+      </div>
 
       <body className="body">
-        <p>
-          This is a personal website about Tom
-        </p>
         <a
           className="App-link"
           href="https://github.com/ppoyusecci"
