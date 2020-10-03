@@ -1,7 +1,17 @@
 import React from 'react';
 import "./eduSec.css"
+import bg1 from '../../images/hkust.jpg'
+import bg2 from '../../images/hkust-2.jpg'
+import { Arrow } from '../../components/arrow/arrow';
 
 export default class EduSec extends React.PureComponent {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      bgwhich: 1
+    }
+  }
 
   componentDidMount () {
     var items = document.querySelectorAll(".uni-hide");
@@ -32,7 +42,7 @@ export default class EduSec extends React.PureComponent {
 
 
 
-    var velocity = 0.5;
+    var velocity = 0.3;
     var bg =  document.querySelector(".edu-sec"); 
     function update(){ 
         var pos = bg.getBoundingClientRect().top; 
@@ -45,17 +55,31 @@ export default class EduSec extends React.PureComponent {
     window.addEventListener('scroll', update);
   }
 
+  changeBg() {
+    var bg =  document.querySelector(".edu-sec"); 
+    if  (this.state.bgwhich === 1) {
+      bg.style.backgroundImage = `url(${bg2})`;
+      this.setState({bgwhich: 2});}
+    else  {
+      bg.style.backgroundImage = `url(${bg1})`;
+      this.setState({bgwhich: 1})}
+  }
+
   render() {
     return (
-        <div className="edu-sec">
+        <div className="edu-sec" onClick={this.changeBg.bind(this)}>
           {/* <div className="headline edu-title uni-hide">My Education</div>
 
           <div className="edu-uni-info uni-hide" style={{padding: '50px'}}> 
           HKUST has risen through the ranks and become a global powerhouse in tertiary education as a result of our continuous pursuit of excellence in everything we do, 
           leaving its mark in life science, engineering, business education, humanities and social science, and much more. 
           </div> */}
+          <div style={{position:"absolute", top: "5%", left: "1%"}}>
+            <Arrow size="80px"/>
+          </div>
 
           <div className="edu-degree-info uni-hide" style={{padding: "60px"}}>
+
 
             <div className="ui grid" style={{padding: '0'}}>
 
