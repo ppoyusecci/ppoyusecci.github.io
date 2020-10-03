@@ -1,8 +1,9 @@
 .Largest-Container{
     background-image: url(./images/bg-01.jpg);
     background-size: cover;
-    height: 250vh;
+    height: 2916px;
     z-index: -1;
+    
   }
 
 .text {

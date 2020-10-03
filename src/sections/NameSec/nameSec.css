@@ -1,8 +1,9 @@
 
 .name-sec {
-  height: 95vh;
+  height: 1080px;
   width: 100vw;
 
+  overflow: hidden;
   
   display: flex;
   flex-direction: column;

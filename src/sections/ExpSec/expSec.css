@@ -1,8 +1,10 @@
 
 .exp-sec {
     background-color: rgb(250, 250, 250);
-    height: 80vh;
+    height: 900px;
     
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     align-items: center;

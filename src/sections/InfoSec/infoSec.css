@@ -1,8 +1,9 @@
 
 .info-sec {
-    height: 150vh;
+    height: 1520px;
     width: 100vw;
-  
+    
+    overflow: hidden;
     
     display: flex;
     flex-direction: column;

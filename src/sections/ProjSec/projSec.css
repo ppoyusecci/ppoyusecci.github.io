@@ -6,7 +6,9 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     
-    height: 100vh;
+    height: 1080px;
+
+    overflow: hidden;
     
     display: flex;
     flex-direction: column;
